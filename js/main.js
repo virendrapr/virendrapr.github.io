@@ -39,8 +39,7 @@
 		      ev.preventDefault();
 		      var data = new FormData(form);
 		      ajax(form.method, form.action, data, success, error);
-                      document.getElementById("my-form-status").style.display = 'block';
-	      return false;
+	              return false;
 	}
 
 });
@@ -296,7 +295,7 @@
     }
   });
 
-  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+  $('.popup-youtube').magnificPopup({
     disableOn: 700,
     type: 'iframe',
     mainClass: 'mfp-fade',
@@ -306,7 +305,9 @@
     fixedContentPos: false
   });
 
-
+ $('.popup-youtube').click(function(){
+     return false;
+ });
 
 
 
@@ -322,7 +323,7 @@
     function success() {
       form.reset();
       button.style = "display: none ";
-      return false;
+      status.style = "display: block";
     }
 
     function error() {
