@@ -593,7 +593,7 @@
 
 			<div class="row no-gutters block-9">
 				<div class="col-md-6 order-md-last d-flex" data-aos="fade-left" data-aos-duration="2000">
-					<form id="conatctForm" method="POST" class="bg-light p-4 p-md-5 contact-form">
+					<form id="conatctForm" action="https://formspree.io/mvokelkj" method="POST" class="bg-light p-4 p-md-5 contact-form">
 						<div class="form-group">
 							<input type="text" class="form-control" placeholder="Your Name" name="name">
 						</div>
@@ -606,12 +606,14 @@
 								oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
 						</div>
 						<div class="form-group">
-							<textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"
-								name="comments"></textarea>
+							<textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Message"
+								></textarea>
 						</div>
+						<input type="hidden" name="_subject" value="New Request" />
 						<div class="form-group">
-							<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+							<input type="submit" value="Send Message" id="my-form-button" class="btn btn-primary py-3 px-5">
 						</div>
+						<p id="my-form-status"></p>
 					</form>
 				</div>
 
@@ -729,6 +731,7 @@
 	<script src="js/jquery.animateNumber.min.js"></script>
 	<script src="js/scrollax.min.js"></script>
 	<script src="js/validate.min.js"></script>
+	<script src="js/email.js"></script>
 	<script src="js/main.js"></script>
 
 </body>
