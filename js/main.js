@@ -39,7 +39,7 @@
 		      ev.preventDefault();
 		      var data = new FormData(form);
 		      ajax(form.method, form.action, data, success, error);
-
+                      document.getElementById("my-form-status").style.display = 'block';
 	      return false;
 	}
 
@@ -322,7 +322,6 @@
     function success() {
       form.reset();
       button.style = "display: none ";
-      status.innerHTML = "Thanks!";
       return false;
     }
 
