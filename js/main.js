@@ -34,11 +34,13 @@
 			minlength: "Please enter valid mobile number (10 - digits)"
 		},
 	},
-	submitHandler: function (ev, form) {
-	      console.log("ev", ev);
-	      ev.preventDefault();
-	      var data = new FormData(form);
-	      ajax(form.method, form.action, data, success, error);
+	submitHandler: function (form) {
+	         form.addEventListener("submit", function(ev) {
+		      ev.preventDefault();
+		      var data = new FormData(form);
+		      ajax(form.method, form.action, data, success, error);
+		    });
+		  });
 
 	      return false;
 	}
