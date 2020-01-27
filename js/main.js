@@ -34,7 +34,8 @@
 			minlength: "Please enter valid mobile number (10 - digits)"
 		},
 	},
-	submitHandler: function (form) {
+	submitHandler: function (ev, form) {
+	      console.log("ev", ev);
 	      ev.preventDefault();
 	      var data = new FormData(form);
 	      ajax(form.method, form.action, data, success, error);
@@ -322,6 +323,7 @@
       form.reset();
       button.style = "display: none ";
       status.innerHTML = "Thanks!";
+      return false;
     }
 
     function error() {
