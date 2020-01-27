@@ -40,7 +40,6 @@
 		      var data = new FormData(form);
 		      ajax(form.method, form.action, data, success, error);
 		    });
-		  });
 
 	      return false;
 	}
