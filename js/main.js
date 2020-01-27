@@ -34,25 +34,7 @@
 			minlength: "Please enter valid mobile number (10 - digits)"
 		},
 	},
-	submitHandler: function (form) {
-		$.post("./request.php",
-		{
-			 name: $('input[name="name"]').val(),
-			 email: $('input[name="email"]').val(),
-			 phone: $('input[name="phone"]').val(),
-			 comments: $('textarea[name="comment"]').val()
-		},
-		function(data, status){
-			if(status='success')
-			{
-				alert("Message sent.");
-				$("#conatctForm").get(0).reset();
-			}
-		});
-		
-		return false;
-		//$('#registerForm').ajaxSubmit();
-	}
+	submitHandler: function (form) {}
 
 });
 
